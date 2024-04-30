@@ -14,6 +14,7 @@ const config = {
     entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
+        publicPath: '/'
     },
     devServer: {
         open: true,
@@ -49,6 +50,9 @@ const config = {
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
+    },
+    devServer: {
+        historyApiFallback: true,
     },
 };
 
